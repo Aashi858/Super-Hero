@@ -127,4 +127,40 @@ function my_keydown(e){
         document.getElementById("current_width").innerHTML = player_width;
         document.getElementById("current_height").innerHTML = player_height;
      }
-}    
+} 
+function up(){
+    if(player_y>=0){
+        player_y = player_y - player_height;
+        console.log("player height =" + player_height);
+        console.log("When up arrow is pressed X =" + player_x + "Y" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function down(){
+    if(player_y<=500){
+        player_y = player_y + player_height;
+        console.log("player height =" + player_height);
+        console.log("When up arrow is pressed X =" + player_x + "Y" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function left(){
+    if(player_x>=0){
+        player_x = player_x - player_width;
+        console.log("block width =" + player_width);
+        console.log("When up arrow is pressed X =" + player_x + "Y" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function right(){
+    if(player_x<=900){
+        player_x = player_x + player_width;
+        console.log("block width =" + player_width);
+        console.log("When up arrow is pressed X =" + player_x + "Y" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}   
